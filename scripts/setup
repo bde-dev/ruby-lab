@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install -y build-essential autoconf libssl-dev libyaml-dev zlib1g-dev libffi-dev libgmp-dev rustc
+
+/usr/local/bin/mise trust /workspaces/ruby-lab/mise.toml && /usr/local/bin/mise install
