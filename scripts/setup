@@ -1,6 +1,10 @@
 #!/bin/bash
 
+# Install Ruby dependencies
 sudo apt-get update
 sudo apt-get install -y build-essential autoconf libssl-dev libyaml-dev zlib1g-dev libffi-dev libgmp-dev rustc
 
 /usr/local/bin/mise trust /workspaces/ruby-lab/mise.toml && /usr/local/bin/mise install
+
+# Install Ruby Gems
+/home/vscode/.local/share/mise/installs/ruby/3.4.5/bin/bundle install
