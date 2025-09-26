@@ -7,4 +7,7 @@ sudo apt-get install -y build-essential autoconf libssl-dev libyaml-dev zlib1g-d
 /usr/local/bin/mise trust /workspaces/ruby-lab/mise.toml && /usr/local/bin/mise install
 
 # Install Ruby Gems
-/home/vscode/.local/share/mise/installs/ruby/3.4.5/bin/bundle install
+echo "Starting install of Ruby Gems using bundle: /usr/local/bin/mise exec ruby -- bundle install"
+echo "NOTE: This command takes a while to kick in, don't panic if it looks like devpod creation froze!"
+
+/usr/local/bin/mise exec ruby -- bundle install --verbose
